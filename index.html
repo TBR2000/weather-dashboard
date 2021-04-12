@@ -4,92 +4,114 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
     <title>Weather Dashboard</title>
 </head>
 <body>
-    <div class="container">
-        <div class="card" style="width: 18rem;">
-            <div class="card-header">
-                Featured
-              </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Cras justo odio</li>
-              <li class="list-group-item">Dapibus ac facilisis in</li>
-              <li class="list-group-item">Vestibulum at eros</li>
-            </ul>
-          </div>
-      </div>
-    <div class="container">
+    <h1 class="heading">Weather Dashboard</h1>
+    <div class="container" id = "search">
+        <h2>Search for a city</h2>
         <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Select City" aria-label="Select City" aria-describedby="button-addon2">
-            <div class="input-group-append">
-              <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+            <input id='city' type="text" class="form-control" placeholder="Select City" aria-label="Select City" aria-describedby="button-addon2">
+            <div class="input-group-append" id="button">
+              <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
             </div>
-            <ul>
+            <div class="container">
+                <div class="card" id="history">
+                    <ul class="list-group-list-group-flush">
+                    </ul>
+                  </div>
+              </div>
+          </div>
+        </div>
+    <div class="container" id="main">
+        <div class="card" id="main-card">
+            <div class="card-header" id="main-card-header">
+                Featured
+                
+              </div>
+              <div 
+              id="icon"><img id="wicon1" src="./assets/icons/09d.png" alt="Weather icon">
+              </div>
+            <ul class="list-group-list-group-flush">
+              <li class="list-group-item" id='temp1'>Temp:</li>
+              <li class="list-group-item" id= 'wind1'>Wind:</li>
+              <li class="list-group-item" id='hum1'>Humidity:</li>
+              <li class="list-group-item" id='uv'>UV Index:</li>
             </ul>
           </div>
-        
       </div>
+      
+    
     <div class="container">
         <section class="row">
-            <div class="col-12 col-md-9">
-              <h2>Our Services</h2>
+            <div class="col-12 col-md-6" id="forecast">
+              <h2>Forecast</h2>
       
               <section class="row justify-content-around">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-header">
+                    <div class="card" id= "day1">
+                        <div class="card-header" id= "day1head">
                             Featured
                         </div>
+                        <div id="icon"><img id="wicon2" src="./assets/icons/09d.png" alt="Weather icon"></div>
                         <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Cras justo odio</li>
-                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
+                            <li class="list-group-item" id='temp2'>Temp:</li>
+                            <li class="list-group-item" id= 'wind2'>Wind:</li>
+                            <li class="list-group-item" id='hum2'>Humidity:</li>
                         </ul>
                     </div>   
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-header">
+                    <div class="card" id= "day2" >
+                        <div class="card-header" id= "day2head" >
                             Featured
                         </div>
+                        <div id="icon"><img id="wicon3" src="./assets/icons/09d.png" alt="Weather icon"></div>
                             <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Cras justo odio</li>
-                            <li class="list-group-item">Dapibus ac facilisis in</li>
-                            <li class="list-group-item">Vestibulum at eros</li>
+                                <li class="list-group-item" id='temp3'>Temp:</li>
+                                <li class="list-group-item" id= 'wind3'>Wind:</li>
+                                <li class="list-group-item" id='hum3'>Humidity:</li>
                             </ul>
                     </div>
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-header">
+                    <div class="card" id= "day3"> 
+                        <div class="card-header" id= "day3head">
                             Featured
                         </div>
+                        <div id="icon"><img id="wicon4" src="./assets/icons/09d.png" alt="Weather icon"></div>
                             <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Cras justo odio</li>
-                            <li class="list-group-item">Dapibus ac facilisis in</li>
-                            <li class="list-group-item">Vestibulum at eros</li>
+                                <li class="list-group-item" id='temp4'>Temp:</li>
+                                <li class="list-group-item" id='wind4'>Wind:</li>
+                                <li class="list-group-item" id='hum4'>Humidity:</li>
                             </ul>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-header">
+                    </div> 
+                    <div class="card" id= "day4">
+                        <div class="card-header" id= "day4head">
                             Featured
                         </div>
+                        <div id="icon"><img id="wicon5" src="./assets/icons/09d.png" alt="Weather icon"></div>
                             <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Cras justo odio</li>
-                            <li class="list-group-item">Dapibus ac facilisis in</li>
-                            <li class="list-group-item">Vestibulum at eros</li>
+                                <li class="list-group-item" id='temp5'>Temp:</li>
+                                <li class="list-group-item" id= 'wind5'>Wind:</li>
+                                <li class="list-group-item" id='hum5'>Humidity:</li>
                             </ul>
                     </div>
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-header">
+                    <div class="card" id= "day5">
+                        <div class="card-header" id= "day5head">
                             Featured
                         </div>
+                        <div id="icon"><img id="wicon6" src="./assets/icons/09d.png" alt="Weather icon"></div>
                             <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Cras justo odio</li>
-                            <li class="list-group-item">Dapibus ac facilisis in</li>
-                            <li class="list-group-item">Vestibulum at eros</li>
+                                <li class="list-group-item" id='temp6'>Temp:</li>
+                                <li class="list-group-item" id= 'wind6'>Wind:</li>
+                                <li class="list-group-item" id='hum6'>Humidity:</li>
                             </ul>
                     </div>
+                    
                 </section>
+                </section>
+                
             </div>
-        </section>
+        
     </div>
 
 
